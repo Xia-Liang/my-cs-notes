@@ -1,5 +1,6 @@
 vscode 
 
+
 * 删除当前行： ctrl + X
 * 行首： home
 * 行尾： end
