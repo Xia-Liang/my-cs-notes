@@ -101,3 +101,5 @@ Linux和Git之父： Linus Benedic Torvalds 李纳斯·托沃兹
 # 许可证
 * 开源是否可以随意转载
 * 开源但是不能商业使用
+
+# IDEA使用Git
