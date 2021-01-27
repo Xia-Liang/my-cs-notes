@@ -109,6 +109,8 @@ Linux和Git之父： Linus Benedic Torvalds 李纳斯·托沃兹
 
 # IDEA使用Git
 
+<font size = 6 color = red>待补充</font>
+
 # Git分支
 
 | 命令 | 说明 |
@@ -124,3 +126,58 @@ Linux和Git之父： Linus Benedic Torvalds 李纳斯·托沃兹
 
 * 同一个文件在合并分支的时候如果都被修改了会引起冲突，修改后重新提交
 * master主分支应该非常稳定
+
+# 进阶(git exercise)
+
+| 命令 | 说明 |
+| - | - |
+| `git rebase [target]` | 将当前分支合并到目标分支（看起来串行） |
+| `git checkout []` detaching head | 将head指向一次提交 或 分支 |
+| `git checkout HEAD^`| ^符号，查找当前分支的父亲分支，^^祖父分支 |
+| `git checkout HEAD~n` | ~符号，移动HEAD指向前n个分支（不需要多次^移动） |
+| `git branch -f master HEAD~3` | -f，将master移动，~3向上3级 |
+| `git reset` | 本地存储，直接回退 |
+| `git revert` | 服务器存储，会提交新分支上去（虽然与想要回退的版本完全一样）|
+
+# 更细致的管理
+
+<font size = 6 color = red>待补充</font>
+
+# Commit格式
+
+
+```
+<type>(<scope>): <subject>
+// 空一行
+<body>
+// 空一行
+<footer>
+```
+
+* type用于说明 commit 的类别，只允许使用下面7个标识（特殊加一个revert，在后面)
+  * feat：新功能（feature）
+  * fix：修补bug
+  * docs：文档（documentation）
+  * style： 格式（不影响代码运行的变动）
+  * refactor：重构（即不是新增功能，也不是修改bug的代码变动）
+  * test：增加测试
+  * chore：构建过程或辅助工具的变动
+
+* scope
+  * scope用于说明 commit 影响的范围，比如数据层、控制层、视图层等等，视项目不同而不同。
+
+* subject
+  * subject是 commit 目的的简短描述，不超过50个字符。
+
+* body
+  * body 部分是对本次 commit 的详细描述，可以分成多行
+  * 使用第一人称现在时
+  * 说明代码变动的动机，以及与以前行为的对比
+
+* Footer 部分只用于两种情况
+  * 如果当前代码与上一个版本不兼容，则 Footer 部分以BREAKING CHANGE开头，后面是对变动的描述、以及变动理由和迁移方法
+  * 关闭 Issue，如果当前 commit 针对某个issue，那么可以在 Footer 部分关闭这个 issue
+
+* 特殊：revert
+  * 如果当前 commit 用于撤销以前的 commit，则必须以revert:开头，后面跟着被撤销 Commit 的 Header
+  * Body部分的格式是固定的，必须写成This reverts commit <lt;hash>.，其中的hash是被撤销 commit 的 SHA 标识符
