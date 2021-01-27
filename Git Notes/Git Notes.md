@@ -103,3 +103,19 @@ Linux和Git之父： Linus Benedic Torvalds 李纳斯·托沃兹
 * 开源但是不能商业使用
 
 # IDEA使用Git
+
+# Git分支
+
+| 命令 | 说明 |
+| - | - |
+| `git branch` | 列出所有本地分支 |
+| `git branch -r` | 列出所有远程分支 |
+| `git branch [branch name]` | 新建分支，但仍然停留在当前位置 |
+| `git checkout -b [branch]` | 新建分支，并切换到新分支 |
+| `git merge [branch]` | 合并指定分支到当前分支 |
+| `git branch -d [branch name]` | 删除分支 |
+| `git push origin --delete [branch name]` | 删除远程分支 |
+| `git branch -dr [remote / branch]` | 删除远程分支 |
+
+* 同一个文件在合并分支的时候如果都被修改了会引起冲突，修改后重新提交
+* master主分支应该非常稳定
