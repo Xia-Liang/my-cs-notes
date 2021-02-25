@@ -186,4 +186,4 @@ Linux和Git之父： Linus Benedic Torvalds 李纳斯·托沃兹
 # bug
 
 * RPC failed; curl 92 HTTP/2 stream 0 was not closed cleanly: PROTOCOL_ERROR (err 1)
- * You might be pushing data larger than the postBuffer size. You can try increasing post buffer size using `git config --global http.postBuffer 157286400`
+    * You might be pushing data larger than the postBuffer size. You can try increasing post buffer size using `git config --global http.postBuffer 157286400`
