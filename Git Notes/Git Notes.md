@@ -181,3 +181,9 @@ Linux和Git之父： Linus Benedic Torvalds 李纳斯·托沃兹
 * 特殊：revert
   * 如果当前 commit 用于撤销以前的 commit，则必须以revert:开头，后面跟着被撤销 Commit 的 Header
   * Body部分的格式是固定的，必须写成This reverts commit <lt;hash>.，其中的hash是被撤销 commit 的 SHA 标识符
+
+
+# bug
+
+* RPC failed; curl 92 HTTP/2 stream 0 was not closed cleanly: PROTOCOL_ERROR (err 1)
+ * You might be pushing data larger than the postBuffer size. You can try increasing post buffer size using `git config --global http.postBuffer 157286400`
