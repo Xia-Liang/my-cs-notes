@@ -187,3 +187,9 @@ Linux和Git之父： Linus Benedic Torvalds 李纳斯·托沃兹
 
 * RPC failed; curl 92 HTTP/2 stream 0 was not closed cleanly: PROTOCOL_ERROR (err 1)
   * You might be pushing data larger than the postBuffer size. You can try increasing post buffer size using `git config --global http.postBuffer 157286400`
+* stop when writing objects
+  * `git config --global http.postBuffer 524288000`
+  * For future references, based on comments:
+  * 500 MB: 524288000 (as posted in the original answer)
+  * 1 GB: 1048576000
+  * 2 GB: 2097152000 (anything higher is rejected as 'out of range')
