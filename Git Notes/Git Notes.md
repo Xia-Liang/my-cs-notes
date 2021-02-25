@@ -193,3 +193,5 @@ Linux和Git之父： Linus Benedic Torvalds 李纳斯·托沃兹
   * 500 MB: 524288000 (as posted in the original answer)
   * 1 GB: 1048576000
   * 2 GB: 2097152000 (anything higher is rejected as 'out of range')
+* stop after total line
+  * This turned out to be no problem at all. I simply had to wait until the upload was complete. I had added several large files and there is not a progress indicator.
