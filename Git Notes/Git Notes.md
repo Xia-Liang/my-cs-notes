@@ -195,3 +195,6 @@ Linux和Git之父： Linus Benedic Torvalds 李纳斯·托沃兹
   * 2 GB: 2097152000 (anything higher is rejected as 'out of range')
 * stop after total line
   * This turned out to be no problem at all. I simply had to wait until the upload was complete. I had added several large files and there is not a progress indicator.
+
+* warning: LF will be replaced by CRLF in ...
+  * https://stackoverflow.com/questions/5834014/lf-will-be-replaced-by-crlf-in-git-what-is-that-and-is-it-important
